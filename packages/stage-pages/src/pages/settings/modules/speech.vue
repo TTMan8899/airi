@@ -90,10 +90,24 @@ onMounted(async () => {
   syncOpenAICompatibleSettings()
 })
 
-watch(activeSpeechProvider, async (newProvider) => {
+watch(activeSpeechProvider, async (newProvider, oldProvider) => {
   await providersStore.loadModelsForConfiguredProviders()
   await speechStore.loadVoicesForProvider(newProvider)
+
+  // Reset model and voice when switching providers (but not on initial load)
+  if (oldProvider !== undefined && oldProvider !== newProvider) {
+    activeSpeechModel.value = ''
+    activeSpeechVoiceId.value = ''
+    activeSpeechVoice.value = undefined
+  }
+
   syncOpenAICompatibleSettings()
+})
+
+watch(activeSpeechModel, async () => {
+  if (activeSpeechProvider.value) {
+    await speechStore.loadVoicesForProvider(activeSpeechProvider.value)
+  }
 })
 
 // Function to generate speech

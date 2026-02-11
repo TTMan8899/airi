@@ -40,8 +40,8 @@ catalogs:
       specifier: 0.1.0-beta.15
       version: 0.1.0-beta.15
     '@moeru/eventa':
-      specifier: 1.0.0-alpha.10
-      version: 1.0.0-alpha.10
+      specifier: 1.0.0-alpha.14
+      version: 1.0.0-alpha.14
     '@moeru/std':
       specifier: 0.1.0-beta.14
       version: 0.1.0-beta.14
@@ -144,6 +144,9 @@ catalogs:
     knip:
       specifier: ^5.82.1
       version: 5.82.1
+    mkcert:
+      specifier: ^3.2.0
+      version: 3.2.0
     nano-staged:
       specifier: ^0.9.0
       version: 0.9.0
@@ -168,6 +171,9 @@ catalogs:
     superjson:
       specifier: ^2.2.6
       version: 2.2.6
+    tsdown:
+      specifier: ^0.17.4
+      version: 0.17.4
     tsx:
       specifier: ^4.21.0
       version: 4.21.0
@@ -312,7 +318,7 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2
       tsdown:
-        specifier: ^0.17.4
+        specifier: 'catalog:'
         version: 0.17.4(@arethetypeswrong/core@0.18.2)(oxc-resolver@11.16.2)(publint@0.3.16)(synckit@0.11.12)(typescript@5.9.3)(unplugin-lightningcss@0.4.4)(unplugin-unused@0.5.6)
       tsx:
         specifier: ^4.21.0
@@ -489,7 +495,7 @@ importers:
         version: 3.8.1
       '@moeru/eventa':
         specifier: ^1.0.0-alpha.11
-        version: 1.0.0-alpha.11(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
+        version: 1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
       '@moeru/std':
         specifier: 'catalog:'
         version: 0.1.0-beta.14
@@ -880,7 +886,7 @@ importers:
         version: 3.8.1
       '@moeru/eventa':
         specifier: ^1.0.0-alpha.11
-        version: 1.0.0-alpha.11(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
+        version: 1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
       '@moeru/std':
         specifier: 'catalog:'
         version: 0.1.0-beta.14
@@ -1025,6 +1031,9 @@ importers:
       mediabunny:
         specifier: ^1.29.0
         version: 1.29.0
+      mkcert:
+        specifier: 'catalog:'
+        version: 3.2.0
       node-vibrant:
         specifier: ^4.0.3
         version: 4.0.3(encoding@0.1.13)
@@ -1268,7 +1277,7 @@ importers:
         version: 3.8.1
       '@moeru/eventa':
         specifier: ^1.0.0-alpha.11
-        version: 1.0.0-alpha.11(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
+        version: 1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
       '@moeru/std':
         specifier: 'catalog:'
         version: 0.1.0-beta.14
@@ -1761,6 +1770,42 @@ importers:
         specifier: ^3.1.8
         version: 3.2.1(typescript@5.9.3)
 
+  integrations/vscode/airi-plugin-vscode:
+    devDependencies:
+      '@proj-airi/plugin-sdk':
+        specifier: workspace:*
+        version: link:../../../packages/plugin-sdk
+
+  integrations/vscode/vscode-airi:
+    devDependencies:
+      '@guiiai/logg':
+        specifier: 'catalog:'
+        version: 1.2.11
+      '@moeru/std':
+        specifier: 'catalog:'
+        version: 0.1.0-beta.14
+      '@proj-airi/server-sdk':
+        specifier: workspace:*
+        version: link:../../../packages/server-sdk
+      '@types/vscode':
+        specifier: ^1.108.1
+        version: 1.108.1
+      es-toolkit:
+        specifier: 'catalog:'
+        version: 1.43.0
+      injeca:
+        specifier: 'catalog:'
+        version: 0.1.7(@guiiai/logg@1.2.11)(error-stack-parser@2.1.4)(nanoid@5.1.6)
+      nanoid:
+        specifier: 'catalog:'
+        version: 5.1.6
+      tinyexec:
+        specifier: ^1.0.2
+        version: 1.0.2
+      vscode-ext-gen:
+        specifier: ^1.5.1
+        version: 1.5.1
+
   packages/audio:
     dependencies:
       '@alexanderolsen/libsamplerate-js':
@@ -1834,7 +1879,7 @@ importers:
         version: 3.0.2(electron@39.2.7)
       '@moeru/eventa':
         specifier: 'catalog:'
-        version: 1.0.0-alpha.10(electron@39.2.7)
+        version: 1.0.0-alpha.14(electron@39.2.7)
       '@moeru/std':
         specifier: 'catalog:'
         version: 0.1.0-beta.14
@@ -1917,13 +1962,31 @@ importers:
     dependencies:
       '@moeru/eventa':
         specifier: ^1.0.0-alpha.11
-        version: 1.0.0-alpha.11(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
+        version: 1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
       '@moeru/std':
         specifier: 'catalog:'
         version: 0.1.0-beta.14
       clustr:
         specifier: ^1.0.2
         version: 1.0.2
+
+  packages/plugin-protocol:
+    dependencies:
+      '@moeru/eventa':
+        specifier: 'catalog:'
+        version: 1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
+      '@xsai/shared-chat':
+        specifier: 'catalog:'
+        version: 0.4.0-beta.13
+
+  packages/plugin-sdk:
+    dependencies:
+      '@moeru/eventa':
+        specifier: 'catalog:'
+        version: 1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
+      '@proj-airi/server-shared':
+        specifier: workspace:*
+        version: link:../server-shared
 
   packages/server-runtime:
     dependencies:
@@ -1945,6 +2008,9 @@ importers:
       nanoid:
         specifier: 'catalog:'
         version: 5.1.6
+      srvx:
+        specifier: ^0.10.1
+        version: 0.10.1
 
   packages/server-sdk:
     dependencies:
@@ -1954,9 +2020,6 @@ importers:
       crossws:
         specifier: ^0.4.3
         version: 0.4.3(srvx@0.10.1)
-      defu:
-        specifier: ^6.1.4
-        version: 6.1.4
       superjson:
         specifier: 'catalog:'
         version: 2.2.6
@@ -1967,18 +2030,15 @@ importers:
 
   packages/server-shared:
     dependencies:
-      '@xsai/shared':
-        specifier: 'catalog:'
-        version: 0.4.0-beta.13
-      '@xsai/shared-chat':
-        specifier: 'catalog:'
-        version: 0.4.0-beta.13
+      '@proj-airi/plugin-protocol':
+        specifier: workspace:*
+        version: link:../plugin-protocol
 
   packages/stage-layouts:
     dependencies:
       '@moeru/eventa':
         specifier: ^1.0.0-alpha.11
-        version: 1.0.0-alpha.11(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
+        version: 1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
       '@moeru/std':
         specifier: 'catalog:'
         version: 0.1.0-beta.14
@@ -2081,7 +2141,7 @@ importers:
     dependencies:
       '@moeru/eventa':
         specifier: ^1.0.0-alpha.11
-        version: 1.0.0-alpha.11(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
+        version: 1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
       '@moeru/std':
         specifier: 'catalog:'
         version: 0.1.0-beta.14
@@ -2209,7 +2269,7 @@ importers:
         version: 3.0.2(electron@40.0.0)
       '@moeru/eventa':
         specifier: ^1.0.0-alpha.11
-        version: 1.0.0-alpha.11(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
+        version: 1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
       '@nekopaw/tempora':
         specifier: 'catalog:'
         version: 0.4.0-alpha.1
@@ -2233,7 +2293,7 @@ importers:
         version: 3.8.1
       '@moeru/eventa':
         specifier: ^1.0.0-alpha.11
-        version: 1.0.0-alpha.11(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
+        version: 1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
       '@proj-airi/audio':
         specifier: workspace:^
         version: link:../audio
@@ -2369,6 +2429,9 @@ importers:
       idb-keyval:
         specifier: 'catalog:'
         version: 6.2.2
+      kokoro-js:
+        specifier: ^1.0.0
+        version: 1.2.1
       localforage:
         specifier: ^1.10.0
         version: 1.10.0
@@ -2945,36 +3008,6 @@ importers:
         specifier: workspace:*
         version: link:../../packages/server-sdk
 
-  plugins/airi-plugin-vscode:
-    devDependencies:
-      '@guiiai/logg':
-        specifier: 'catalog:'
-        version: 1.2.11
-      '@moeru/std':
-        specifier: 'catalog:'
-        version: 0.1.0-beta.14
-      '@proj-airi/server-sdk':
-        specifier: workspace:*
-        version: link:../../packages/server-sdk
-      '@types/vscode':
-        specifier: ^1.108.1
-        version: 1.108.1
-      es-toolkit:
-        specifier: 'catalog:'
-        version: 1.43.0
-      injeca:
-        specifier: 'catalog:'
-        version: 0.1.7(@guiiai/logg@1.2.11)(error-stack-parser@2.1.4)(nanoid@5.1.6)
-      nanoid:
-        specifier: 'catalog:'
-        version: 5.1.6
-      tinyexec:
-        specifier: ^1.0.2
-        version: 1.0.2
-      vscode-ext-gen:
-        specifier: ^1.5.1
-        version: 1.5.1
-
   plugins/airi-plugin-web-extension:
     devDependencies:
       '@iconify-json/solar':
@@ -2985,7 +3018,7 @@ importers:
         version: 1.2.4
       '@moeru/eventa':
         specifier: ^1.0.0-alpha.11
-        version: 1.0.0-alpha.11(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
+        version: 1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))
       '@proj-airi/server-sdk':
         specifier: workspace:^
         version: link:../../packages/server-sdk
@@ -5975,22 +6008,8 @@ packages:
       web-worker:
         optional: true
 
-  '@moeru/eventa@1.0.0-alpha.10':
-    resolution: {integrity: sha512-JXwSd+/N3ahbD+JNbMYbEZwaEWnfesp81AXOoS39fnvBeL54PtuffDbGNZiuK+uQZ9i4nA7D1k04NP2uP99KYA==}
-    peerDependencies:
-      electron: '>=30'
-      h3: 2.0.0-beta.1
-      web-worker: ^1.5.0
-    peerDependenciesMeta:
-      electron:
-        optional: true
-      h3:
-        optional: true
-      web-worker:
-        optional: true
-
-  '@moeru/eventa@1.0.0-alpha.11':
-    resolution: {integrity: sha512-5i2LYA19E9siAdqhobVm386dqkV4EZw0+uGDEwLiGqfopE/3yX1zdgOkdvEoT+YJf0SIUqDwuMZoYXkvfWV/kA==}
+  '@moeru/eventa@1.0.0-alpha.14':
+    resolution: {integrity: sha512-VMz75aYTJO85yXj0jj/M8ImakOYr6OUZnV/I5gmseVrMFcqBc8UC6Pk2LTwoMQw/EWaU59557a1lpnUqeyTMQw==}
     peerDependencies:
       electron: '>=30'
       h3: 2.0.0-beta.1
@@ -11728,11 +11747,13 @@ packages:
 
   glob@10.5.0:
     resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@11.1.0:
     resolution: {integrity: sha512-vuNwKSaKiqm7g0THUBu2x7ckSs3XJLXE+2ssL7/MfTGPLLcrJQ/4Uq1CjPTtO5cCIiRxqvN6Twy1qOwhL0Xjcw==}
     engines: {node: 20 || >=22}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@13.0.0:
@@ -11741,7 +11762,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-agent@3.0.0:
     resolution: {integrity: sha512-PT6XReJ+D07JvGoxQMkT6qji/jVNfX/h364XHZOWeRzy64sSFr+xJ5OX7LI3b4MPQzdL4H8Y8M0xzPpsVMwA8Q==}
@@ -12531,6 +12552,9 @@ packages:
   knitwork@1.3.0:
     resolution: {integrity: sha512-4LqMNoONzR43B1W0ek0fhXMsDNW/zxa1NdFAVMY+k28pgZLovR4G3PB5MrpTxCy1QaZCqNoiaKPr5w5qZHfSNw==}
 
+  kokoro-js@1.2.1:
+    resolution: {integrity: sha512-oq0HZJWis3t8lERkMJh84WLU86dpYD0EuBPtqYnLlQzyFP1OkyBRDcweAqCfhNOpltyN9j/azp1H6uuC47gShw==}
+
   kolorist@1.8.0:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
 
@@ -13235,6 +13259,11 @@ packages:
   mitt@3.0.1:
     resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
 
+  mkcert@3.2.0:
+    resolution: {integrity: sha512-026Eivq9RoOjOuLJGzbhGwXUAjBxRX11Z7Jbm4/7lqT/Av+XNy9SPrJte6+UpEt7i+W3e/HZYxQqlQcqXZWSzg==}
+    engines: {node: '>=16'}
+    hasBin: true
+
   mkdirp-classic@0.5.3:
     resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}
 
@@ -13837,6 +13866,9 @@ packages:
 
   pgpass@1.0.5:
     resolution: {integrity: sha512-FdW9r/jQZhSeohs1Z3sI1yxFQNFvMcnmfuj4WBMUTxOrAyLMaTcE1aAMBiTlbMNaXvBCQuVi0R7hd8udDSP7ug==}
+
+  phonemizer@1.2.1:
+    resolution: {integrity: sha512-v0KJ4mi2T4Q7eJQ0W15Xd4G9k4kICSXE8bpDeJ8jisL4RyJhNWsweKTOi88QXFc4r4LZlz5jVL5lCHhkpdT71A==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -15089,12 +15121,12 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
-    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   tar@7.5.2:
     resolution: {integrity: sha512-7NyxrTE4Anh8km8iEy7o0QYPs+0JKBTj5ZaqHg6B39erLg0qYXN3BijtShwbsNSvQ+LN75+KV+C4QR/f6Gwnpg==}
     engines: {node: '>=18'}
-    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   taze@19.9.2:
     resolution: {integrity: sha512-If8bq7lSckIMPfXV+C9jjEfdsQnRryh/foKfpX/ah6zI0TrQfUGWSGCaaD32Bqy5/KGRmLZie3EwMSr3Au21XQ==}
@@ -19658,14 +19690,14 @@ snapshots:
       electron: 40.0.0
       h3: 2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1))
 
-  '@moeru/eventa@1.0.0-alpha.10(electron@39.2.7)':
+  '@moeru/eventa@1.0.0-alpha.14(electron@39.2.7)':
     dependencies:
       nanoid: 5.1.6
       picomatch: 4.0.3
     optionalDependencies:
       electron: 39.2.7
 
-  '@moeru/eventa@1.0.0-alpha.11(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))':
+  '@moeru/eventa@1.0.0-alpha.14(electron@40.0.0)(h3@2.0.1-rc.5(crossws@0.4.3(srvx@0.10.1)))':
     dependencies:
       nanoid: 5.1.6
       picomatch: 4.0.3
@@ -27007,6 +27039,11 @@ snapshots:
   knitwork@1.3.0:
     optional: true
 
+  kokoro-js@1.2.1:
+    dependencies:
+      '@huggingface/transformers': 3.8.1
+      phonemizer: 1.2.1
+
   kolorist@1.8.0: {}
 
   ky@1.14.2: {}
@@ -27981,6 +28018,11 @@ snapshots:
 
   mitt@3.0.1: {}
 
+  mkcert@3.2.0:
+    dependencies:
+      commander: 11.1.0
+      node-forge: 1.3.3
+
   mkdirp-classic@0.5.3: {}
 
   mkdirp@0.5.6:
@@ -28648,6 +28690,8 @@ snapshots:
   pgpass@1.0.5:
     dependencies:
       split2: 4.2.0
+
+  phonemizer@1.2.1: {}
 
   picocolors@1.1.1: {}
 

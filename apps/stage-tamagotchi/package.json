@@ -1,7 +1,7 @@
 {
   "name": "@proj-airi/stage-tamagotchi",
   "type": "module",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "private": true,
   "description": "LLM powered virtual character",
   "author": {
@@ -97,6 +97,7 @@
     "jszip": "^3.10.1",
     "localforage": "^1.10.0",
     "mediabunny": "^1.29.0",
+    "mkcert": "catalog:",
     "node-vibrant": "^4.0.3",
     "nprogress": "^0.2.0",
     "onnxruntime-web": "^1.23.2",
@@ -175,5 +176,9 @@
     "vue-macros": "^3.1.2",
     "vue-tsc": "^3.1.8",
     "yaml": "^2.8.2"
+  },
+  "build": {
+    "appId": "ai.moeru.airi",
+    "extends": "electron-builder.config.ts"
   }
 }
